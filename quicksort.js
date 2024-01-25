@@ -38,6 +38,3 @@ console.timeEnd();
 console.time();
 vectorOrd2 = vectorOrd2.sort();
 console.timeEnd();
-
-console.log("Vector Ordenado:", vectorOrd);
-console.log("Vector Desordenado:", vectorDesord);
