@@ -18,23 +18,25 @@ function quicksort(array) {
 
   return quicksort(left).concat([pivot], quicksort(right));
 }
-const vectorLenght = 1000000;
-let vectorDesord = new Array(vectorLenght);
 
+const vectorLength = 1000000;
+let vectorDesord = new Array(vectorLength);
 
 for (let i = 0; i < vectorDesord.length; i++) {
   vectorDesord[i] = new Array(2);
-  vectorDesord[i][0] = Math.floor(Math.random() * vectorLenght);
+  vectorDesord[i][0] = Math.floor(Math.random() * vectorLength);
   vectorDesord[i][1] = i + 1;
 }
 
 let vectorOrd = vectorDesord.map(vectorElement=>vectorElement.slice());
 let vectorOrd2 = vectorDesord.map(vectorElement=>vectorElement.slice());
 
+//tiempo de ejecución quicksort
 console.time();
 vectorOrd = quicksort(vectorOrd);
 console.timeEnd();
 
+//tiempo de ejecución ordenamiento nativo
 console.time();
 vectorOrd2 = vectorOrd2.sort();
 console.timeEnd();
