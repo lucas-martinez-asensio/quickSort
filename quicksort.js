@@ -18,9 +18,9 @@ function quicksort(array) {
 
   return quicksort(left).concat([pivot], quicksort(right));
 }
+
 const vectorLenght = 1000000;
 let vectorDesord = new Array(vectorLenght);
-
 
 for (let i = 0; i < vectorDesord.length; i++) {
   vectorDesord[i] = new Array(2);
@@ -36,5 +36,5 @@ vectorOrd = quicksort(vectorOrd);
 console.timeEnd();
 
 console.time();
-vectorOrd2 = vectorOrd2.sort();
+vectorOrdered2 = vectorOrdered2.sort(([a], [z]) => a - z);
 console.timeEnd();
